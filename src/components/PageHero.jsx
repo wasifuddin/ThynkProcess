@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom'
 
 const PageHero = ({ title, subtitle, backgroundClass = "bg-gradient-to-br from-[#D8F4FA] to-[#AEE7F2]", ctaText, ctaLink }) => {
+  // Check if it's a dark background
+  const isDarkBackground = backgroundClass.includes('from-[#0C2F86]') || backgroundClass.includes('to-[#0E1A6A]')
+  
   return (
     <section className={`${backgroundClass} py-20`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold font-montserrat text-[#0E1A6A] mb-6">
+        <h1 className={`text-4xl md:text-6xl font-bold font-montserrat mb-6 ${isDarkBackground ? 'text-white' : 'text-[#0E1A6A]'}`}>
           {title}
         </h1>
-        <p className="text-xl text-[#334155] max-w-3xl mx-auto mb-8">
+        <p className={`text-xl max-w-3xl mx-auto mb-8 ${isDarkBackground ? 'text-[#AEE7F2]' : 'text-[#334155]'}`}>
           {subtitle}
         </p>
         {ctaText && ctaLink && (

@@ -12,36 +12,46 @@ const Header = () => {
       name: 'Products', 
       href: '/products',
       dropdown: [
-        { name: 'Platform A', href: '/products/platform-a' },
-        { name: 'Platform B', href: '/products/platform-b' },
-        { name: 'Platform C', href: '/products/platform-c' }
+        { name: 'SAP Business One', href: '/products/sap-business-one' },
+        { name: 'Salesforce CRM', href: '/products/salesforce' },
+        { name: 'Power BI', href: '/products/power-bi' },
+        { name: 'Tableau', href: '/products/tableau' },
+        { name: 'SAP Analytics Cloud', href: '/products/sap-analytics-cloud' },
+        { name: 'Add-Ons & Extensions', href: '/products/add-ons' },
+        { name: 'View All Products', href: '/products' }
       ]
     },
     { 
       name: 'Solutions', 
       href: '/solutions',
       dropdown: [
-        { name: 'Business Solutions', href: '/solutions/business' },
-        { name: 'Industry Solutions', href: '/solutions/industry' },
-        { name: 'Role-based Solutions', href: '/solutions/role-based' }
+        { name: 'ERP Solutions', href: '/solutions/erp-solutions' },
+        { name: 'CRM Solutions', href: '/solutions/crm-solutions' },
+        { name: 'Analytics Solutions', href: '/solutions/analytics-solutions' },
+        { name: 'Integration Solutions', href: '/solutions/integration-solutions' },
+        { name: 'By Industry', href: '/solutions#by-industry' },
+        { name: 'By Role', href: '/solutions#by-role' }
       ]
     },
     { 
       name: 'Services', 
       href: '/services',
       dropdown: [
-        { name: 'Implementation', href: '/services/implementation' },
-        { name: 'Support & Managed', href: '/services/support' },
-        { name: 'Specialized Services', href: '/services/specialized' }
+        { name: 'Implementation Services', href: '/services/implementation' },
+        { name: 'Integration & Automation', href: '/services/integration-automation' },
+        { name: 'Support & Managed Services', href: '/services/support' },
+        { name: 'Strategic Advisory', href: '/services/strategic-advisory' }
       ]
     },
     { 
       name: 'Industries', 
       href: '/industries',
       dropdown: [
-        { name: 'Healthcare', href: '/industries/healthcare' },
-        { name: 'Finance', href: '/industries/finance' },
-        { name: 'Manufacturing', href: '/industries/manufacturing' }
+        { name: 'Food & Beverage', href: '/industries/food-beverage' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Wholesale Distribution', href: '/industries/wholesale-distribution' },
+        { name: 'Healthcare & Pharma', href: '/industries/healthcare-pharma' },
+        { name: 'View All Industries', href: '/industries' }
       ]
     },
     { 
@@ -63,7 +73,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-white text-xl font-bold font-montserrat">
-              YourCompany
+              ThynkProcess
             </Link>
           </div>
 
@@ -71,12 +81,15 @@ const Header = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigation.map((item) => (
-                <div key={item.name} className="relative group">
+                <div 
+                  key={item.name} 
+                  className="relative group"
+                  onMouseEnter={() => setActiveDropdown(item.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
                   <Link
                     to={item.href}
                     className="text-white hover:text-[#12A8D4] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
                   >
                     {item.name}
                     {item.dropdown && (
@@ -86,7 +99,7 @@ const Header = () => {
                   
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
-                    <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <div className="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}

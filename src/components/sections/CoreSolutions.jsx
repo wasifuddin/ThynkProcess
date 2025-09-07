@@ -3,22 +3,32 @@ import { Link } from 'react-router-dom'
 const CoreSolutions = () => {
   const solutions = [
     {
-      title: "Platform A",
-      description: "Advanced enterprise platform for large-scale operations with AI-powered analytics and automation.",
-      features: ["AI Analytics", "Automation", "Scalability", "Security"],
-      icon: "🚀"
+      title: "SAP Business One",
+      description: "ERP for growing businesses",
+      features: ["Financial Management", "Inventory Control", "Sales & CRM", "Manufacturing"],
+      icon: "🏢",
+      color: "from-[#0F79B9] to-[#0D4E9E]"
     },
     {
-      title: "Platform B", 
-      description: "Flexible solution for mid-market companies with customizable workflows and integrations.",
-      features: ["Custom Workflows", "Integrations", "Flexibility", "Support"],
-      icon: "⚡"
+      title: "Salesforce", 
+      description: "CRM & Marketing Automation",
+      features: ["Sales Automation", "Customer Service", "Marketing Cloud", "Analytics"],
+      icon: "⚡",
+      color: "from-[#12A8D4] to-[#0F79B9]"
     },
     {
-      title: "Platform C",
-      description: "Specialized platform for specific industries with compliance and regulatory features.",
-      features: ["Compliance", "Industry-Specific", "Regulatory", "Expertise"],
-      icon: "🎯"
+      title: "Business Intelligence",
+      description: "Power BI, Tableau, Crystal",
+      features: ["Data Visualization", "Executive Dashboards", "Predictive Analytics", "Self-Service BI"],
+      icon: "📊",
+      color: "from-[#0D4E9E] to-[#0C2F86]"
+    },
+    {
+      title: "Custom Integrations",
+      description: "API, Middleware, File-based",
+      features: ["System Integration", "Data Synchronization", "Process Automation", "Real-time Connectivity"],
+      icon: "🔗",
+      color: "from-[#78D2E9] to-[#12A8D4]"
     }
   ]
 
@@ -27,43 +37,36 @@ const CoreSolutions = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold font-montserrat text-[#0E1A6A] mb-4">
-            Core Solutions
+            Our Core Solutions
           </h2>
-          <p className="text-xl text-[#64748B] max-w-3xl mx-auto">
-            Choose from our comprehensive suite of technology platforms designed to meet 
-            your specific business needs and drive digital transformation.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-[#F8FAFC] rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-[#E2E8F0]">
-              <div className="text-4xl mb-4">{solution.icon}</div>
-              <h3 className="text-2xl font-bold font-montserrat text-[#0E1A6A] mb-4">
-                {solution.title}
-              </h3>
-              <p className="text-[#64748B] mb-6">
-                {solution.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {solution.features.map((feature, featureIndex) => (
-                  <span 
-                    key={featureIndex}
-                    className="bg-[#12A8D4] text-white px-3 py-1 rounded-full text-sm font-medium"
-                  >
-                    {feature}
-                  </span>
-                ))}
+            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className={`bg-gradient-to-r ${solution.color} p-6 text-white`}>
+                <div className="text-3xl mb-3">{solution.icon}</div>
+                <h3 className="text-xl font-bold font-montserrat mb-1">{solution.title}</h3>
+                <p className="text-white opacity-90 text-sm">{solution.description}</p>
               </div>
-              <Link
-                to="/products"
-                className="inline-flex items-center text-[#0F79B9] hover:text-[#0D4E9E] font-semibold transition-colors"
-              >
-                Learn More
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+              <div className="p-6">
+                <div className="space-y-2 mb-6">
+                  {solution.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center">
+                      <svg className="w-4 h-4 text-[#12A8D4] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-[#334155] text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  to="/solutions"
+                  className="w-full bg-[#0F79B9] hover:bg-[#0D4E9E] text-white py-2 px-4 rounded-lg font-semibold transition-colors duration-300 text-center block text-sm"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -73,7 +76,7 @@ const CoreSolutions = () => {
             to="/solutions"
             className="bg-[#0F79B9] hover:bg-[#0D4E9E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center"
           >
-            View All Solutions
+            Learn More About Our Solutions
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

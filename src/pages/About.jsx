@@ -1,21 +1,31 @@
+import FloatingCTA from '../components/sections/FloatingCTA'
 import PageHero from '../components/PageHero'
-import CompanyStory from '../components/sections/CompanyStory'
+import WhoWeAre from '../components/sections/WhoWeAre'
+import OurStory from '../components/sections/OurStory'
+import MissionValues from '../components/sections/MissionValues'
 import LeadershipTeam from '../components/sections/LeadershipTeam'
-import GlobalExperience from '../components/sections/GlobalExperience'
 import Partnerships from '../components/sections/Partnerships'
+import GlobalReach from '../components/sections/GlobalReach'
+import ClientTestimonials from '../components/sections/ClientTestimonials'
+import WorkWithUs from '../components/sections/WorkWithUs'
 
 const About = () => {
   return (
     <div>
+      <FloatingCTA />
       <PageHero 
-        title="About YourCompany"
-        subtitle="Empowering businesses worldwide with innovative technology solutions and exceptional service delivery."
+        title="About Us – ThynkProcess"
+        subtitle="Proudly Melbourne-Based ERP Consulting Experts"
         backgroundClass="bg-gradient-to-br from-[#D8F4FA] to-[#AEE7F2]"
       />
-      <CompanyStory />
+      <WhoWeAre />
+      <OurStory />
+      <MissionValues />
       <LeadershipTeam />
-      <GlobalExperience />
       <Partnerships />
+      <GlobalReach />
+      <ClientTestimonials />
+      <WorkWithUs />
     </div>
   )
 }

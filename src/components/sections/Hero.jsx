@@ -9,26 +9,26 @@ const Hero = () => {
           {/* Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl font-bold font-montserrat text-[#0E1A6A] mb-6 leading-tight">
-              Empowering Your Business with 
-              <span className="text-[#12A8D4] block">Innovative Solutions</span>
+              Scale Smarter with 
+              <span className="text-[#12A8D4] block">Tailored ERP, CRM, and Analytics Solutions</span>
             </h1>
             <p className="text-xl text-[#334155] mb-8 max-w-2xl mx-auto lg:mx-0">
-              Transform your operations with cutting-edge technology platforms, 
-              expert implementation services, and comprehensive support that drives 
-              measurable results across industries.
+              Say goodbye to disconnected systems and manual processes. We help growing companies 
+              streamline operations, enhance customer experiences, and make better decisions with 
+              SAP Business One, Salesforce, and BI tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
-                to="/solutions"
+                to="/contact"
                 className="bg-[#0F79B9] hover:bg-[#0D4E9E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                Explore Solutions
+                Book a Free Consultation
               </Link>
               <Link
                 to="/contact"
                 className="border-2 border-[#0F79B9] text-[#0F79B9] hover:bg-[#0F79B9] hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
-                Get Started
+                See a Demo
               </Link>
             </div>
           </div>
@@ -38,20 +38,20 @@ const Hero = () => {
             <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#12A8D4] rounded-lg p-4 text-white text-center">
-                  <div className="text-2xl font-bold">500+</div>
-                  <div className="text-sm">Clients Served</div>
+                  <div className="text-2xl font-bold">50+</div>
+                  <div className="text-sm">Businesses Transformed</div>
                 </div>
                 <div className="bg-[#0F79B9] rounded-lg p-4 text-white text-center">
-                  <div className="text-2xl font-bold">99.9%</div>
-                  <div className="text-sm">Uptime</div>
+                  <div className="text-2xl font-bold">20+</div>
+                  <div className="text-sm">Years Expertise</div>
                 </div>
                 <div className="bg-[#0D4E9E] rounded-lg p-4 text-white text-center">
-                  <div className="text-2xl font-bold">24/7</div>
-                  <div className="text-sm">Support</div>
+                  <div className="text-2xl font-bold">90%</div>
+                  <div className="text-sm">Efficiency Gains</div>
                 </div>
                 <div className="bg-[#0C2F86] rounded-lg p-4 text-white text-center">
-                  <div className="text-2xl font-bold">50+</div>
-                  <div className="text-sm">Countries</div>
+                  <div className="text-2xl font-bold">100%</div>
+                  <div className="text-sm">Local Support</div>
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold font-montserrat mb-4">YourCompany</h3>
+            <h3 className="text-xl font-bold font-montserrat mb-4">ThynkProcess</h3>
             <p className="text-gray-300 mb-4 max-w-md">
               Empowering businesses with innovative technology solutions and exceptional service delivery across global markets.
             </p>
@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 YourCompany. All rights reserved.
+              © 2024 ThynkProcess. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-[#12A8D4] text-sm transition-colors">

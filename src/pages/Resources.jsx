@@ -1,24 +1,29 @@
 import PageHero from '../components/PageHero'
+import ResourceCentre from '../components/sections/ResourceCentre'
+import ResourceLibrary from '../components/sections/ResourceLibrary'
+import AIAutomationResourcePack from '../components/sections/AIAutomationResourcePack'
+import WebinarsWorkshops from '../components/sections/WebinarsWorkshops'
+import CustomerSuccessStories from '../components/sections/CustomerSuccessStories'
+import ToolsCalculators from '../components/sections/ToolsCalculators'
+import ResourceContact from '../components/sections/ResourceContact'
 
 const Resources = () => {
   return (
     <div>
       <PageHero 
-        title="Resources"
-        subtitle="Guides, toolkits, webinars, and thought leadership to help you succeed."
-        backgroundClass="bg-gradient-to-br from-[#0D4E9E] to-[#0C2F86]"
+        title="Resources – ThynkProcess"
+        subtitle="Explore guides, webinars, customer stories, and tools to support your digital transformation journey"
+        backgroundClass="bg-gradient-to-br from-[#0C2F86] to-[#0E1A6A]"
+        ctaText="Download Latest Capability Statement"
+        ctaLink="/resources/download/capability-statement"
       />
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold font-montserrat text-[#0E1A6A] mb-8">
-            Resources Coming Soon
-          </h2>
-          <p className="text-xl text-[#64748B]">
-            We're building comprehensive resource pages with guides, toolkits, 
-            webinars, and thought leadership content.
-          </p>
-        </div>
-      </div>
+      <ResourceCentre />
+      <ResourceLibrary />
+      <AIAutomationResourcePack />
+      <WebinarsWorkshops />
+      <CustomerSuccessStories />
+      <ToolsCalculators />
+      <ResourceContact />
     </div>
   )
 }

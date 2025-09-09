@@ -50,7 +50,10 @@ const Header = () => {
         { name: 'Food & Beverage', href: '/industries/food-beverage' },
         { name: 'Manufacturing', href: '/industries/manufacturing' },
         { name: 'Wholesale Distribution', href: '/industries/wholesale-distribution' },
-        { name: 'Healthcare & Pharma', href: '/industries/healthcare-pharma' },
+        { name: 'Logistics & Warehousing', href: '/industries/logistics-warehousing' },
+        { name: 'Agriculture & Agribusiness', href: '/industries/agriculture-agribusiness' },
+        { name: 'Pharmaceutical & Healthcare', href: '/industries/pharmaceutical-healthcare' },
+        { name: 'Retail & eCommerce', href: '/industries/retail-ecommerce' },
         { name: 'View All Industries', href: '/industries' }
       ]
     },
